@@ -1,0 +1,71 @@
+.register {
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 678px;
+    height: 680px;
+}
+
+.register_heading {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.form_register {
+    margin: 0 auto;
+    width: 600px;
+    /* height: 644px; */
+}
+
+.register_name,
+.register_email,
+.register_password,
+.register_password_confirmation,
+.register_button {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 18px;
+}
+
+.register_name input,
+.register_email input,
+.register_password input,
+.register_password_confirmation input {
+    width: 600px;
+    height: 45px;
+    font-size: 16px;
+    color: black;
+    padding-left: 20px;
+    border: 2px solid gray;
+    border-radius: 5px;
+
+}
+
+.error_message {
+    font-size: 18px;
+    color: red;
+}
+
+.register_button_text {
+    text-align: center;
+    width: 600px;
+    height: 45px;
+    font-size: 18px;
+    margin-top: 60px;
+    border: none;
+    border-radius: 5px;
+    background: #ff5555;
+    color: white;
+    cursor: pointer;
+}
+
+.link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.link_login {
+    text-decoration: none;
+    font-size: 18px;
+    color: blue;
+}

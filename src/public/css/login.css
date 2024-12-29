@@ -1,0 +1,69 @@
+.login {
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 678px;
+    height: 680px;
+}
+
+.login_heading {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.form_login {
+    margin: 0 auto;
+    width: 600px;
+    /* height: 644px; */
+}
+
+.login_name,
+.login_email,
+.login_password,
+.login_button {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 18px;
+}
+
+.login_name input,
+.login_email input,
+.login_password input {
+    width: 600px;
+    height: 45px;
+    font-size: 16px;
+    color: black;
+    padding-left: 20px;
+    border: 2px solid gray;
+    border-radius: 5px;
+
+}
+
+.error_message {
+    font-size: 18px;
+    color: red;
+}
+
+.login_button_text {
+    text-align: center;
+    width: 600px;
+    height: 45px;
+    font-size: 18px;
+    margin-top: 60px;
+    border: none;
+    border-radius: 5px;
+    background: #ff5555;
+    color: white;
+    cursor: pointer;
+}
+
+.link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.link_register {
+    text-decoration: none;
+    font-size: 18px;
+    color: blue;
+}
