@@ -12,13 +12,21 @@
             <p>プロフィール設定</p>
         </div>
         
-
-        <form class="form_profile" action="/" method="post">
+        <form class="form_profile" action="/mypage/profile" enctype="multipart/form-data" method="post">
             @csrf
             <div class="profile_img">
-                {{-- <div class="img_area"></div> --}}
-                <img class="img_area" src="{{asset('profile_image_backgrand.png')}}" alt="No Image" width="250" height="200">   
-                <button class="profile_button_img">画像を選択する</button>
+                <img class="img_area" src="{{asset('profile_image_backgrand.png')}}" alt="No Image" width="250" height="200">
+                <div>
+                    <label for="id_img">
+                        <div class="lavel_img">画像を選択する</div>
+                        <input class="input_img" id="id_img" type="file" name="img_path" accept=".png, .jpg, .jpeg">
+                    </label> 
+                    @error("img_path")
+                        <div class="error_message">
+                            {{ $message }} 
+                        </div>
+                    @enderror
+                </div>             
             </div>
 
 
@@ -34,7 +42,7 @@
 
 
             <div class="profile_postalcode">
-                <div class="profile_postalcode_title">郵便番号(ハイフンなし)</div>
+                <div class="profile_postalcode_title">郵便番号(ハイフンあり)</div>
                 <input type="postalcode" name="postalcode" value="{{ old('postalcode') }}"/>
             </div>
             @error("postalcode")

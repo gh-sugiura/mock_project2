@@ -25,23 +25,40 @@
 }
 
 .img_area {
-    width: 200px;
+    width: 210px;
     height: 180px;
     border-radius: 75px;
-    margin-right: 50px;
+    margin-right: 20px;
 }
 
-.profile_button_img {
+.lavel_img {
+    width: 175px;
     height: 50px;
     padding: 6px 15px;
     font-size: 20px;
     font-weight: bold;
     color: #ff5555;
     background-color: white;
-    border: 2px solid #ff5555;
+    border: 3px solid #ff5555;
     border-radius: 10px;
     cursor: pointer;
 }
+
+.input_img {
+    display: none;
+}
+
+/* .input_img::file-selector-button {
+    height: 50px;
+    padding: 6px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff5555;
+    background-color: white;
+    border: 3px solid #ff5555;
+    border-radius: 10px;
+    cursor: pointer;
+} */
 
 .profile_name,
 .profile_postalcode,
@@ -68,7 +85,7 @@
 }
 
 .error_message {
-    font-size: 18px;
+    font-size: 16px;
     color: red;
 }
 

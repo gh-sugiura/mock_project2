@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProfileImageController;
 
 
 // test
@@ -20,8 +21,8 @@ Route::middleware(["auth", "verified"])->group(function () {
 
 
 // ProfileController
-Route::get('/', [ProfileController::class, 'postCreateProfile']);
-Route::post('/', [ProfileController::class, 'postCreateProfile']);
+// Route::get('/mypage/profile', [ProfileController::class, 'postCreateProfile']);
+Route::post('/mypage/profile', [ProfileController::class, 'postCreateProfile']);
 
 
 // email authentication (refrence:official document)

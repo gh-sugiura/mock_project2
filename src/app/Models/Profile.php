@@ -10,6 +10,7 @@ class Profile extends Model
     use HasFactory;
     protected $fillable = [
         'user_id',
+        'img_path',
         'name',
         'postalcode',
         'address',
@@ -19,10 +20,5 @@ class Profile extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
-    }
-
-    public function profile_image()
-    {
-        return $this->hasOne(ProfileImage::class);
     }
 }
