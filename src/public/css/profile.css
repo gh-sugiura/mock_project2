@@ -25,14 +25,14 @@
 }
 
 .img_area {
-    width: 210px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     border-radius: 75px;
     margin-right: 20px;
 }
 
 .lavel_img {
-    width: 175px;
+    width: 180px;
     height: 50px;
     padding: 6px 15px;
     font-size: 20px;

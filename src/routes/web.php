@@ -4,28 +4,38 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\ProfileImageController;
 
 
 // test
-Route::get('/mypage/profile', function () {
-    return view('profile');
+Route::get('/purchase/address', function () {
+    return view('address');
+});
+Route::post('/purchase/address', [ProfileController::class, 'postEditAddress']);
+
+
+
+// ProductController
+// "auth" => \App\Http\Middleware\Authenticate::class,
+Route::middleware("auth")->group(function () {
+    Route::get("/index", [ProductController::class, "getIndex"]);
+    Route::get("/item/{product_id}", [ProductController::class, "getItem"]);   //passparameter
+    Route::get("/mypage", [ProductController::class, "getMypage"]);
 });
 
-Route::middleware(["auth", "verified"])->group(function () {
-    Route::get('/index', function () {
-        return view('index');
-    });
-});
 
 
 // ProfileController
-// Route::get('/mypage/profile', [ProfileController::class, 'postCreateProfile']);
-Route::post('/mypage/profile', [ProfileController::class, 'postCreateProfile']);
+// "auth" => \App\Http\Middleware\Authenticate::class,
+Route::middleware("auth")->group(function () {
+    Route::get('/mypage/profile', [ProfileController::class, 'getProfile']);
+    Route::post('/mypage', [ProfileController::class, 'postCreateProfile']);
+});
 
 
-// email authentication (refrence:official document)
+
+// email authentication (refrence : official document)
 // display email authentication notification screen
 Route::get("/email/verify", function () {
     return view("email_verify");
@@ -46,9 +56,9 @@ Route::post("/email/verification-notification", function (Request $request) {
 
 
 // use fortify default routing
-// Route::get("/register", [ContactController::class, "register"]);
-// Route::post("/register", [ContactController::class, "register"]);
-// Route::get("/login", [ContactController::class, "login"]);
-// Route::post("/login", [ContactController::class, "login"]);
-// Route::get("/logout", [ContactController::class, "logout"]);
-// Route::post("/logout", [ContactController::class, "logout"]);
+// Route::get("/register", [Controller::class, ""]);
+// Route::post("/register", [Controller::class, ""]);
+// Route::get("/login", [Controller::class, ""]);
+// Route::post("/login", [Controller::class, ""]);
+// Route::get("/logout", [Controller::class, ""]);
+// Route::post("/logout", [Controller::class, ""]);

@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
 
+
 class UsersTableSeeder extends Seeder
 {
     /**
@@ -83,6 +84,5 @@ class UsersTableSeeder extends Seeder
             "password" => bcrypt("kobakoba"),
         ];
         DB::table("users")->insert($param);
-    
     }
 }

@@ -1,0 +1,58 @@
+.address {
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 678px;
+    height: 680px;
+}
+
+.address_heading {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.form_address {
+    margin: 0 auto;
+    width: 600px;
+    /* height: 644px; */
+}
+
+.address_postalcode,
+.address_address,
+.address_building,
+.address_button {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 18px;
+}
+
+.address_postalcode input,
+.address_address input,
+.address_building input {
+    width: 600px;
+    height: 45px;
+    font-size: 16px;
+    color: black;
+    padding-left: 20px;
+    border: 2px solid gray;
+    border-radius: 5px;
+
+}
+
+.error_message {
+    font-size: 16px;
+    color: red;
+}
+
+.address_button_text {
+    text-align: center;
+    width: 600px;
+    height: 45px;
+    font-size: 18px;
+    margin-top: 60px;
+    border: none;
+    border-radius: 5px;
+    background: #ff5555;
+    color: white;
+    cursor: pointer;
+}

@@ -15,7 +15,9 @@
 <body>
     <header class="header">
         <div class="header_logo">
-            <img src="{{asset('logo_CT_COACHTECH.svg')}}" alt="COACH TECH">     
+            <a href="/index">
+                <img src="{{asset('logo_CT_COACHTECH.svg')}}" alt="COACH TECH"> 
+            </a>  
         </div>
         <div class="header_search">
             <input class="search_box" type="search" name="search_name" placeholder="なにをお探しですか？" spellcheck="false"></input>
@@ -29,7 +31,7 @@
                 @csrf
                 <button class="link_logout">ログアウト</button>
             </form>
-            <a href="/" class="link_mypage">マイページ</a>
+            <a href="/mypage" class="link_mypage">マイページ</a>
             <a href="/" class="link_exhibit">出品</a>
         </div>
     </header>

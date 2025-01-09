@@ -4,7 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProfilesTable extends Migration
+
+class CreateProductUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +14,10 @@ class CreateProfilesTable extends Migration
      */
     public function up()
     {
-        Schema::create('profiles', function (Blueprint $table) {
+        Schema::create('product_user', function (Blueprint $table) {
             $table->id();
+            $table->foreignId("product_id")->constrained()->cascadeOnDelete();
             $table->foreignId("user_id")->constrained()->cascadeOnDelete();
-            $table->string("img_path")->nullable();
-            $table->string("name", 255);
-            $table->string("postalcode");
-            $table->string("address");
-            $table->string("building")->nullable();
             $table->timestamp("created_at")->useCurrent()->nullable();
             $table->timestamp("updated_at")->useCurrent()->nullable();
         });
@@ -33,6 +30,6 @@ class CreateProfilesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('profiles');
+        Schema::dropIfExists('product_user');
     }
 }
