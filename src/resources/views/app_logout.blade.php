@@ -32,7 +32,7 @@
                 <button class="link_logout">ログアウト</button>
             </form>
             <a href="/mypage" class="link_mypage">マイページ</a>
-            <a href="/" class="link_exhibit">出品</a>
+            <a href="/sell" class="link_exhibit">出品</a>
         </div>
     </header>
 

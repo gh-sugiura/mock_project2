@@ -12,20 +12,27 @@ use App\Http\Requests\AddressRequest;
 
 class ProfileController extends Controller
 {
+    // page transition : profile display
     public function getProfile()
     {
         $profile = Profile::find(Auth::id());
-        // $profile = Profile::find(20);
         return view('profile',compact("profile"));
     }
 
 
-    public function postCreateProfile(ProfileRequest $request)
+
+    // page transition : profile -> mypage
+    public function postCreateEditProfile(ProfileRequest $request)
     {
-        $img_path = $request->file('img_path') 
-            ->store('public/profile_image');
-        
-        $profile_input = [
+        //get & save image path
+        if(isset($request['img_path'])) {
+            $img_path = $request['img_path']->store('public/profile_image');
+        } else {
+            $img_path = null;
+        }
+
+        // create column array for Profiles table
+        $profile_create = [
             "user_id" => Auth::id(),
             "img_path" => $img_path,
             "name" => $request["name"],
@@ -34,9 +41,10 @@ class ProfileController extends Controller
             "building" => $request["building"],
         ];
 
+        // create or update Profiles table column
         $profile_old = Profile::find(Auth::id());
         if(is_null($profile_old)) {
-            Profile::create($profile_input);
+            Profile::create($profile_create);
         } else {
             $profile_old -> update([
                 "img_path" => $img_path,
@@ -52,25 +60,27 @@ class ProfileController extends Controller
     }
 
 
+
+    // page transition : address -> 
     public function postEditAddress(AddressRequest $request)
     {
-        $address = Profile::find(Auth::id());
-        // $address = Profile::find(1)
-        //     -> update([
-        //         "postalcode" => $request["postalcode"],
-        //         "address" => $request["address"],
-        //         "building" => $request["building"],
-        //     ]);
+        // $address = 
+        Profile::find(Auth::id())
+            -> update([
+                "postalcode" => $request["postalcode"],
+                "address" => $request["address"],
+                "building" => $request["building"],
+            ]);
 
-        if ($request["postalcode"] != null) {
-            $address -> update(["postalcode" => $request["postalcode"]]);
-        }
-        if ($request["address"] != null) {
-            $address -> update(["address" => $request["address"]]);
-        }
-        if ($request["building"] != null) {
-            $address -> update(["building" => $request["building"]]);
-        }
+        // if ($request["postalcode"] != null) {
+        //     $address -> update(["postalcode" => $request["postalcode"]]);
+        // }
+        // if ($request["address"] != null) {
+        //     $address -> update(["address" => $request["address"]]);
+        // }
+        // if ($request["building"] != null) {
+        //     $address -> update(["building" => $request["building"]]);
+        // }
 
         return view("item");
     }

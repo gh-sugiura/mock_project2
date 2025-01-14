@@ -21,18 +21,18 @@
                 @else
                     <img class="img_area" src="{{asset('profile_image_backgrand.png')}}" alt="No Image" width="200" height="200">                
                 @endif
+                {{-- input type="file"でデフォルト表示される「選択されていません」を非表示にするため、inputを非表示にしてlabelを設定 --}}
                 <div>
-                    {{-- input type="file"でデフォルト表示される「選択されていません」を非表示にするため、inputを非表示にしてlabelを設定 --}}
                     <label for="id_img">
-                        <div class="lavel_img">画像を選択する</div>
+                        <p class="lavel_img">画像を選択する</p>
                         <input class="input_img" id="id_img" type="file" name="img_path" accept=".png, .jpg, .jpeg">
                     </label> 
-                    @error("img_path")
-                        <div class="error_message">
-                            {{ $message }} 
-                        </div>
-                    @enderror
-                </div>             
+                </div>
+                @error("img_path")
+                    <div class="error_message">
+                        {{ $message }} 
+                    </div>
+                @enderror   
             </div>
 
 

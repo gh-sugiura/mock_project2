@@ -12,13 +12,13 @@ class Product extends Model
         'img_path',
         'name',
         'price',
-        'detail',
+        'content',
         'condition',
     ];
 
     public function categories()
     {
-        return $this->belongsToMany(Category::class,'category_product','category_id','product_id');
+        return $this->belongsToMany(Category::class,'category_products','category_id','product_id');
     }
 
     public function users()

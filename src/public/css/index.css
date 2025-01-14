@@ -4,7 +4,7 @@
     /* height: 50px; */
     border-bottom: 2px solid black;
 }
-    
+
 .tab_recommendation {
     text-decoration: none;
     font-size: 25px;
@@ -35,11 +35,11 @@
     margin-left: 100px;
 }
 
-.product_img_wrap,
 .product_img {
     width: 250px;
     height: 250px;
     background-color: gray;
+    /* border: 0.5px solid black; */
     cursor: pointer;
 }
 

@@ -17,7 +17,6 @@
             <div class="product_card">
                 <div class="product_img_wrap">
                     <a href="/item/{{$product['id']}}">
-                        {{-- <img class="product_img" src="{{asset('storage/product_image/bag.jpg')}}" alt="No Image" width="250" height="250"> --}}
                         <img class="product_img" src="{{asset('storage/'.$product["img_path"])}}" alt="No Image" width="250" height="250">
                     </a>
                 </div>

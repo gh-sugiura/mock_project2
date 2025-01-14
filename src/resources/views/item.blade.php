@@ -12,7 +12,7 @@
             <div class="dummy_product_img"></div>
         </div>
         <div class="display_right">
-            {{-- <p class="product_name">{{$product["name"]}}</p> --}}
+            <p class="product_name">{{$product["name"]}}</p>
         </div>
     </div> 
 @endsection

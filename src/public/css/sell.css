@@ -1,0 +1,126 @@
+.sell {
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 678px;
+    height: 680px;
+}
+
+.sell_heading {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.form_sell {
+    margin: 0 auto;
+    width: 678px;
+    /* height: 644px; */
+}
+
+.sell_img_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 678px; */
+    height: 200px;
+    border: 1px dashed gray
+}
+
+.sell_img {
+    width: 180px;
+    height: 50px;
+    padding: 6px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff5555;
+    background-color: white;
+    border: 3px solid #ff5555;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.sell_img_input {
+    display: none;
+    /* width: 50px; */
+}
+
+.sell_detail_heading,
+.sell_product_heading {
+    font-size: 26px;
+    font-weight: bold;
+    color: gray;
+    border-bottom: 2px solid gray;
+    margin-top: 50px;
+}
+
+.sell_img_title,
+.sell_category_title,
+.sell_condition_title,
+.sell_name_title,
+.sell_content_title,
+.sell_price_title {
+    width: 678px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+.sell_category_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 678px;
+}
+
+.sell_category {
+    font-size: 14px;
+    color: #ff5555;
+    background-color: white;
+    border: 1px solid #ff5555;
+    border-radius: 20px;
+    margin: 13px 10px;
+    padding: 3px 10px;
+    cursor: pointer;
+}
+
+.sell_category:hover {
+    color: white;
+    background-color: #ff5555;
+}
+
+.sell_category_input {
+    /* display: none; */
+}
+
+.sell_condition,
+.sell_name,
+.sell_price
+ {
+    font-size: 16px;
+    width: 678px;
+    height: 40px;
+}
+
+textarea {
+    font-size: 16px;
+    width: 678px;
+    height: 200px;
+}
+
+.error_message {
+    font-size: 16px;
+    color: red;
+}
+
+.sell_button_text {
+    text-align: center;
+    width: 678px;
+    height: 45px;
+    font-size: 18px;
+    margin-top: 60px;
+    border: none;
+    border-radius: 5px;
+    background: #ff5555;
+    color: white;
+    cursor: pointer;
+}

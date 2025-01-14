@@ -20,8 +20,10 @@ Route::post('/purchase/address', [ProfileController::class, 'postEditAddress']);
 // "auth" => \App\Http\Middleware\Authenticate::class,
 Route::middleware("auth")->group(function () {
     Route::get("/index", [ProductController::class, "getIndex"]);
-    Route::get("/item/{product_id}", [ProductController::class, "getItem"]);   //passparameter
+    Route::post("/index", [ProductController::class, "postIndex"]);
     Route::get("/mypage", [ProductController::class, "getMypage"]);
+    Route::get("/item/{product_id}", [ProductController::class, "getItem"]);   //passparameter
+    Route::get("/sell", [ProductController::class, "getSell"]);
 });
 
 
@@ -30,7 +32,7 @@ Route::middleware("auth")->group(function () {
 // "auth" => \App\Http\Middleware\Authenticate::class,
 Route::middleware("auth")->group(function () {
     Route::get('/mypage/profile', [ProfileController::class, 'getProfile']);
-    Route::post('/mypage', [ProfileController::class, 'postCreateProfile']);
+    Route::post('/mypage', [ProfileController::class, 'postCreateEditProfile']);
 });
 
 
