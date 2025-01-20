@@ -6,13 +6,12 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
-
+use App\Models\Profile;
+use App\Models\Product;
+use Illuminate\Support\Facades\Auth;
 
 // test
-Route::get('/purchase/address', function () {
-    return view('address');
-});
-Route::post('/purchase/address', [ProfileController::class, 'postEditAddress']);
+// Route::get('/purchase/address', [ProfileController::class, 'getAddress']);
 
 
 
@@ -22,7 +21,8 @@ Route::middleware("auth")->group(function () {
     Route::get("/index", [ProductController::class, "getIndex"]);
     Route::post("/index", [ProductController::class, "postIndex"]);
     Route::get("/mypage", [ProductController::class, "getMypage"]);
-    Route::get("/item/{product_id}", [ProductController::class, "getItem"]);   //passparameter
+    Route::get("/item/{product_id}", [ProductController::class, "getItem"]);    //passparameter
+    Route::get("/purchase/{product_id}", [ProductController::class, "getPurchase"]);    //passparameter
     Route::get("/sell", [ProductController::class, "getSell"]);
 });
 
@@ -33,6 +33,8 @@ Route::middleware("auth")->group(function () {
 Route::middleware("auth")->group(function () {
     Route::get('/mypage/profile', [ProfileController::class, 'getProfile']);
     Route::post('/mypage', [ProfileController::class, 'postCreateEditProfile']);
+    Route::get('/purchase/address/{product_id}', [ProfileController::class, 'getAddress']);    //passparameter
+    Route::post('/purchase/{product_id}', [ProfileController::class, 'postEditAddress']);
 });
 
 
@@ -64,3 +66,8 @@ Route::post("/email/verification-notification", function (Request $request) {
 // Route::post("/login", [Controller::class, ""]);
 // Route::get("/logout", [Controller::class, ""]);
 // Route::post("/logout", [Controller::class, ""]);
+
+
+// login/registerでリダイレクト先を分ける
+// ミドルウェア？
+// 

@@ -1,13 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\User;
-use App\Models\Profile;
-use App\Models\Product;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Http\Requests\ProfileRequest;
 use App\Http\Requests\AddressRequest;
+use App\Models\User;
+use App\Models\Profile;
+use App\Models\Product;
 
 
 class ProfileController extends Controller
@@ -61,10 +61,19 @@ class ProfileController extends Controller
 
 
 
-    // page transition : address -> 
-    public function postEditAddress(AddressRequest $request)
+    // page transition : address display
+    public function getAddress($product_id)
     {
-        // $address = 
+        $product = Product::find($product_id);
+        $profile = Profile::find(Auth::id());
+        return view('address', compact("product", "profile"));
+    }
+
+
+
+    // page transition : address -> purchase
+    public function postEditAddress(AddressRequest $request, $product_id)
+    {
         Profile::find(Auth::id())
             -> update([
                 "postalcode" => $request["postalcode"],
@@ -72,16 +81,8 @@ class ProfileController extends Controller
                 "building" => $request["building"],
             ]);
 
-        // if ($request["postalcode"] != null) {
-        //     $address -> update(["postalcode" => $request["postalcode"]]);
-        // }
-        // if ($request["address"] != null) {
-        //     $address -> update(["address" => $request["address"]]);
-        // }
-        // if ($request["building"] != null) {
-        //     $address -> update(["building" => $request["building"]]);
-        // }
-
-        return view("item");
+        $product = Product::find($product_id);
+        $profile = Profile::find(Auth::id());
+        return view('purchase',compact("product", "profile"));
     }
 }

@@ -14,5 +14,6 @@
         <div class="display_right">
             <p class="product_name">{{$product["name"]}}</p>
         </div>
+        <a href="/purchase/{{$product['id']}}" class="purchase_link">購入手続きへ</a>
     </div> 
 @endsection

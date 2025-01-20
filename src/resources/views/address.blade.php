@@ -1,4 +1,4 @@
-@extends('app')
+@extends('app_logout')
 
 
 @section('css')
@@ -13,11 +13,11 @@
         </div>
         
 
-        <form class="form_address" action="/purchase/address" method="post">
+        <form class="form_address" action="/purchase/{{$product['id']}}" method="post">
             @csrf
             <div class="address_postalcode">
                 <div class="address_postalcode_title">郵便番号（ハイフンあり）</div>
-                <input type="text" name="postalcode" value="{{ old('postalcode') }}"/>                
+                <input type="text" name="postalcode" value="{{$profile['postalcode']}}"/>                
             </div>
             @error("postalcode")
                 <div class="error_message">
@@ -28,7 +28,7 @@
 
             <div class="address_address">
                 <div class="address_address_title">住所</div>
-                <input type="text" name="address" value="{{ old('address') }}"/>
+                <input type="text" name="address" value="{{$profile['address']}}"/>
             </div>
             @error("address")
                 <div class="error_message">
@@ -39,7 +39,7 @@
 
             <div class="address_building">
                 <div class="address_building_title">建物名</div>
-                <input type="text" name="building" value="{{ old('building') }}"/>
+                <input type="text" name="building" value="{{$profile['building']}}"/>
             </div>
             @error("building")
                 <div class="error_message">

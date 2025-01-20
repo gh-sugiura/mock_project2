@@ -66,3 +66,19 @@
 6. `php artisan db:seed`:シーディングの実行
 
 &ensp;※`sudo chmod -R 777 *`:ファイルアクセス権限を付与
+
+
+## ユーザー情報
+シーダーファイルにより生成されるユーザー情報は、以下の表の通りである。
+| ユーザーID | ユーザー名  | メールアドレス         | ログインパスワード   | 出品した商品ID  | 出品した商品     | 
+| :--------: | ---------- | --------------------- | ------------------ | :------------: | ---------------- | 
+| 1          | sugiura    | sugiura@example.com   | sugisugi           | 1              | 腕時計           | 
+| 2          | sato       | sato@example.com      | satosato           | 2              | HDD              | 
+| 3          | tanaka     | tanaka@example.com    | tanatana           | 3              | 玉ねぎ3束        | 
+| 4          | suzuki     | suzuki@example.com    | suzusuzu           | 4              | 革靴             | 
+| 5          | ito        | ito@example.com       | itooitoo           | 5              | ノートPC         | 
+| 6          | takahashi  | takahashi@example.com | takataka           | 6              | マイク           | 
+| 7          | watanabe   | watanabe@example.com  | watawata           | 7              | ショルダーバッグ | 
+| 8          | yamamoto   | yamamoto@example.com  | yamayama           | 8              | タンブラー       | 
+| 9          | nakamura   | nakamura@example.com  | nakanaka           | 9              | コーヒーミル     | 
+| 10         | kobayashi  | kobayashi@example.com | kobakoba           | 10             | メイクセット     | 
