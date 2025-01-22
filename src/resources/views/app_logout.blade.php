@@ -20,10 +20,10 @@
             </a>  
         </div>
         <div class="header_search">
-            <input class="search_box" type="search" name="search_name" placeholder="なにをお探しですか？" spellcheck="false"></input>
-            <form class="form_search_button" action="/" method="get">
+            <form class="form_search_button" action="/index" method="get">
                 @csrf
-                <button class="search_button">検索</button>
+                <input class="search_box" type="search" name="search_name" placeholder="なにをお探しですか？" spellcheck="false"></input>
+                <button class="search_button" name="button" value="search">検索</button>
             </form>
         </div>
         <div class="header_link">

@@ -15,17 +15,33 @@ use App\Models\Profile;
 
 class ProductController extends Controller
 {
-    // page transition : index display
-    public function getIndex()
+    // page transition : index display and search item
+    public function getIndex(Request $request)
     {
         $products = Product::all();
+
+        // search item
+        if ($request["button"] == "search") {
+            $products = Product::where("name", "LIKE", "%{$request["search_name"]}%") -> get();
+        }
+
         return view("index",compact("products"));
     }
 
 
 
-    // page transition : sell -> index
-    public function postIndex(SellRequest $request)
+    // page transition : mypage display
+    public function getMypage()
+    {
+        $products = Product::all();
+        $profile = Profile::find(Auth::id());
+        return view("mypage", compact("products", "profile"));
+    }
+
+
+
+    // page transition : sell -> mypage
+    public function postMypage(SellRequest $request)
     {
         // create Products table column
         $img_path = $request['img_path']->store('public/product_image');
@@ -51,17 +67,8 @@ class ProductController extends Controller
         }
 
         $products = Product::all();
-        return view("index",compact("products"));
-    }
-
-
-
-    // page transition : mypage display
-    public function getMypage()
-    {
-        $products = Product::all();
         $profile = Profile::find(Auth::id());
-        return view("mypage", compact("products","profile"));
+        return view("mypage", compact("products", "profile"));
     }
 
 

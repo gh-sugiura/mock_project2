@@ -13,7 +13,7 @@
         </div>
         
 
-        <form class="form_sell" action="/index" enctype="multipart/form-data" method="post">
+        <form class="form_sell" action="/mypage" enctype="multipart/form-data" method="post">
             @csrf
             <div class="sell_img_title">商品画像</div>
             <div class="sell_img_wrap">
@@ -33,12 +33,10 @@
                 <div class="sell_detail_heading">商品の詳細</div>
                     <div class="sell_category_title">カテゴリー</div>
                         <div class="sell_category_wrap">
-                            @foreach ($categories as $category)
-                                <div>
-                                    <label for="sell_category_{{$category['id']}}">
-                                        <div class="sell_category">{{$category["category"]}}</div>
-                                        <input type="checkbox" class="sell_category_input" id="sell_category_{{$category['id']}}"  name="sell_category[]" value="{{$category['id']}}">
-                                    </label> 
+                            @foreach ($categories as $category) 
+                                <div class="sell_category">
+                                    <input type="checkbox" class="sell_category_input" id="sell_category_{{$category['id']}}"  name="sell_category[]" value="{{$category['id']}}">
+                                    <label for="sell_category_{{$category['id']}}">{{$category["category"]}}</label> 
                                 </div>
                             @endforeach
                         </div>
@@ -100,10 +98,10 @@
 @endsection
 
 
-@section('script')
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
+{{-- @section('script') --}}
+    {{-- <script src="https://code.jquery.com/jquery-3.7.1.js"
             integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
             crossorigin="anonymous">
-    </script>
-    <script src="{{asset('js/sell.js')}}"></script>
-@endsection
+    </script> --}}
+    {{-- <script src="{{asset('js/sell.js')}}"></script> --}}
+{{-- @endsection --}}

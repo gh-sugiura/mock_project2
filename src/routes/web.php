@@ -19,8 +19,8 @@ use Illuminate\Support\Facades\Auth;
 // "auth" => \App\Http\Middleware\Authenticate::class,
 Route::middleware("auth")->group(function () {
     Route::get("/index", [ProductController::class, "getIndex"]);
-    Route::post("/index", [ProductController::class, "postIndex"]);
     Route::get("/mypage", [ProductController::class, "getMypage"]);
+    Route::post("/mypage", [ProductController::class, "postMypage"]);
     Route::get("/item/{product_id}", [ProductController::class, "getItem"]);    //passparameter
     Route::get("/purchase/{product_id}", [ProductController::class, "getPurchase"]);    //passparameter
     Route::get("/sell", [ProductController::class, "getSell"]);
