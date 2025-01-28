@@ -1,4 +1,87 @@
 .display_wrap {
     display: flex;
+    justify-content: center;
+    margin-top: 100px;
 }
 
+.display_left {
+    /* width: 384px; */
+    width: calc(100% * 0.3);
+}
+
+.display_right {
+    /* width: 384px; */
+    width: calc(100% * 0.3);
+}
+
+.item_name {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.item_price {
+    font-size: 32px;
+}
+
+.item_price_tax {
+    font-size: 20px;
+}
+
+.table {
+    width: 150px;
+    text-align: center;
+}
+
+.table_figure {
+    font-size: 30px;
+}
+
+.item_link_area {
+    width: calc(100%*0.9);
+    text-align: center;
+    background-color: #ff5555;
+    font-size: 25px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 15px;
+}
+
+.item_link {
+    text-decoration: none;
+    color: white;
+}
+
+.description_title,
+.infomation_title {
+    margin-top: 35px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: bold; 
+}
+
+.infomation_category,
+.infomation_condition {
+    display: flex;
+    width: calc(100%*0.9);
+}
+
+.category_title,
+.condition_title {
+    margin-right: 50px;
+    font-weight: bold;
+}
+
+.content,
+.category_title,
+.category,
+.condition_title,
+.condition {
+    font-size: 18px;
+}
+
+.category {
+    padding: 0px 10px;
+    margin-right: 20px;
+    background-color: lightgray;
+    border-radius: 13px;
+}

@@ -47,7 +47,7 @@
         </div>
 
 
-        <div class="display_light">
+        <div class="display_right">
             <div class="purchase_table_wrap">
                 <table class="purchase_table">
                     <tr>

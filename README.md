@@ -77,8 +77,8 @@
 | 3          | tanaka     | tanaka@example.com    | tanatana           | 3              | 玉ねぎ3束        | 
 | 4          | suzuki     | suzuki@example.com    | suzusuzu           | 4              | 革靴             | 
 | 5          | ito        | ito@example.com       | itooitoo           | 5              | ノートPC         | 
-| 6          | takahashi  | takahashi@example.com | takataka           | 6              | マイク           | 
-| 7          | watanabe   | watanabe@example.com  | watawata           | 7              | ショルダーバッグ | 
-| 8          | yamamoto   | yamamoto@example.com  | yamayama           | 8              | タンブラー       | 
-| 9          | nakamura   | nakamura@example.com  | nakanaka           | 9              | コーヒーミル     | 
-| 10         | kobayashi  | kobayashi@example.com | kobakoba           | 10             | メイクセット     | 
+| 6          | takahashi  | takahashi@example.com | takataka           |                | 　　　           | 
+| 7          | watanabe   | watanabe@example.com  | watawata           |                | 　　　　　　　　　 | 
+| 8          | yamamoto   | yamamoto@example.com  | yamayama           |                | 　　　　　      | 
+| 9          | nakamura   | nakamura@example.com  | nakanaka           |                | 　　　　　　     | 
+| 10         | kobayashi  | kobayashi@example.com | kobakoba           |                | 　　　　　　     | 

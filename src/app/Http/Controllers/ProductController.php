@@ -15,12 +15,12 @@ use App\Models\Profile;
 
 class ProductController extends Controller
 {
-    // page transition : index display and search item
+    // page transition : index display and search product
     public function getIndex(Request $request)
     {
         $products = Product::all();
 
-        // search item
+        // search product
         if ($request["button"] == "search") {
             $products = Product::where("name", "LIKE", "%{$request["search_name"]}%") -> get();
         }
@@ -77,7 +77,22 @@ class ProductController extends Controller
     public function getItem($product_id)
     {
         $product = Product::find($product_id);
-        return view("item",compact("product"));
+        // $categories = CategoryProducts::where("product_id", $product_id)::with("category")->get();
+        // $categories = CategoryProducts::with("category")->get();
+        // $categories = CategoryProducts::where("product_id", $product_id)->get();
+        // $categories = $product::with("category_products")->get();
+        // $categories = $product->categories["category"];
+
+        // create category array
+        $category = $product->categories;
+        $categories = [];
+            // dd($category[0]["category"]);
+        foreach ($category as $i) {
+            // array_push($categories, $category[$i]["category"]);
+            array_push($categories, $i["category"]);
+        }
+
+        return view("item",compact("product","categories"));
     }
 
 
