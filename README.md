@@ -47,7 +47,7 @@
 
 
 ## ER図
-![ER図](er.drawio.png)
+![ER図](src/er_diagram.drawio.png)
 
 
 ## 環境構築
@@ -66,3 +66,19 @@
 6. `php artisan db:seed`:シーディングの実行
 
 &ensp;※`sudo chmod -R 777 *`:ファイルアクセス権限を付与
+
+
+## ユーザー情報
+シーダーファイルにより生成されるユーザー情報は、以下の表の通りである。
+| ユーザーID | ユーザー名  | メールアドレス         | ログインパスワード   | 出品した商品ID  | 出品した商品     | 
+| :--------: | ---------- | --------------------- | ------------------ | :------------: | ---------------- | 
+| 1          | sugiura    | sugiura@example.com   | sugisugi           | 1              | 腕時計           | 
+| 2          | sato       | sato@example.com      | satosato           | 2              | HDD              | 
+| 3          | tanaka     | tanaka@example.com    | tanatana           | 3              | 玉ねぎ3束        | 
+| 4          | suzuki     | suzuki@example.com    | suzusuzu           | 4              | 革靴             | 
+| 5          | ito        | ito@example.com       | itooitoo           | 5              | ノートPC         | 
+| 6          | takahashi  | takahashi@example.com | takataka           |                | 　　　           | 
+| 7          | watanabe   | watanabe@example.com  | watawata           |                | 　　　　　　　　　 | 
+| 8          | yamamoto   | yamamoto@example.com  | yamayama           |                | 　　　　　      | 
+| 9          | nakamura   | nakamura@example.com  | nakanaka           |                | 　　　　　　     | 
+| 10         | kobayashi  | kobayashi@example.com | kobakoba           |                | 　　　　　　     | 

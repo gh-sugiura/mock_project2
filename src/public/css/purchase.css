@@ -1,0 +1,98 @@
+.display_wrap {
+    display: flex;
+    margin-top: 100px;
+}
+
+.display_left {
+    margin-left: 80px;
+    width: calc(100% * 0.55);
+}
+
+.display_right {
+    width: calc(100% * 0.45);
+}
+
+.purchase_product_wrap {
+    display: flex;
+    padding-bottom: 40px;
+    border-bottom: 1px solid black;
+}
+
+.purchase_product {
+    margin-left: 50px;
+    font-size: 28px;
+}
+
+.product_name {
+    font-weight: bold;
+}
+
+.purchase_payment_wrap,
+.purchase_address_wrap {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 50px;
+    border-bottom: 1px solid black;
+}
+
+.purchase_address_heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.purchase_payment_title,
+.purchase_address_title {
+    margin-left: 50px;
+}
+
+.purchase_payment,
+.purchase_address_postalcode,
+.purchase_address {
+    margin-left: 100px;
+}
+
+.purchase_payment {
+    font-size: 20px;
+}
+
+.error_message {
+    font-size: 20px;
+    color: red;
+}
+
+.address_link {
+    text-decoration: none;
+    color: #0791f4;
+    margin-right: 50px;
+}
+
+.purchase_table_wrap,
+.purchase_button_wrap {
+    margin-left: 100px;
+}
+
+.purchase_table {
+    width: 400px;
+}
+
+.purchase_table tr {
+    text-align: center;
+    border: 1px solid black;
+}
+
+.purchase_table td {
+    font-size: 23px;
+    padding: 35px 0px;
+}
+
+.purchase_button {
+    width: 400px;
+    font-size: 25px;
+    color: white;
+    background-color: #ff5555;
+    border: none;
+    border-radius: 5px;
+    margin-top: 50px;
+    padding: 10px 0px;
+    cursor: pointer;
+}

@@ -1,4 +1,5 @@
 <?php
+// edit from default
 
 namespace App\Providers;
 
@@ -17,7 +18,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/home';
+    public const HOME = '/index';
 
     /**
      * The controller namespace for the application.

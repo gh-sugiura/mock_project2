@@ -1,0 +1,103 @@
+.profile {
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 678px;
+    height: 680px;
+}
+
+.profile_heading {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.form_profile {
+    margin: 0 auto;
+    width: 600px;
+    /* height: 644px; */
+}
+
+.profile_img {
+    display: flex;
+    align-items: center;
+    height: 150px;
+    margin-bottom: 50px;
+}
+
+.img_area {
+    width: 200px;
+    height: 200px;
+    border-radius: 75px;
+    margin-right: 20px;
+}
+
+.lavel_img {
+    width: 180px;
+    height: 50px;
+    padding: 6px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff5555;
+    background-color: white;
+    border: 3px solid #ff5555;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.input_img {
+    display: none;
+}
+
+/* .input_img::file-selector-button {
+    height: 50px;
+    padding: 6px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff5555;
+    background-color: white;
+    border: 3px solid #ff5555;
+    border-radius: 10px;
+    cursor: pointer;
+} */
+
+.profile_name,
+.profile_postalcode,
+.profile_address,
+.profile_building,
+.profile_button {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 18px;
+}
+
+.profile_name input,
+.profile_postalcode input,
+.profile_address input,
+.profile_building input {
+    width: 600px;
+    height: 45px;
+    font-size: 16px;
+    color: black;
+    padding-left: 20px;
+    border: 2px solid gray;
+    border-radius: 5px;
+
+}
+
+.error_message {
+    font-size: 16px;
+    color: red;
+}
+
+.profile_button_text {
+    text-align: center;
+    width: 600px;
+    height: 45px;
+    font-size: 18px;
+    margin-top: 60px;
+    border: none;
+    border-radius: 5px;
+    background: #ff5555;
+    color: white;
+    cursor: pointer;
+}
