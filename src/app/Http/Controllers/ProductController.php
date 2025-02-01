@@ -18,11 +18,11 @@ class ProductController extends Controller
     // page transition : index display and search product
     public function getIndex(Request $request)
     {
-        $products = Product::all();
-
-        // search product
+        // DB接続の回数が変わる
         if ($request["button"] == "search") {
             $products = Product::where("name", "LIKE", "%{$request["search_name"]}%") -> get();
+        } else {
+            $products = Product::all();
         }
 
         return view("index",compact("products"));
@@ -77,18 +77,11 @@ class ProductController extends Controller
     public function getItem($product_id)
     {
         $product = Product::find($product_id);
-        // $categories = CategoryProducts::where("product_id", $product_id)::with("category")->get();
-        // $categories = CategoryProducts::with("category")->get();
-        // $categories = CategoryProducts::where("product_id", $product_id)->get();
-        // $categories = $product::with("category_products")->get();
-        // $categories = $product->categories["category"];
 
         // create category array
         $category = $product->categories;
         $categories = [];
-            // dd($category[0]["category"]);
         foreach ($category as $i) {
-            // array_push($categories, $category[$i]["category"]);
             array_push($categories, $i["category"]);
         }
 

@@ -23,42 +23,36 @@
                 </label>    
             </div>
             @error("img_path")
-                <div class="error_message">
-                    {{$message}} 
-                </div>
+                <div class="error_message">{{$message}}</div>
             @enderror
 
 
             <div class="sell_detail">
                 <div class="sell_detail_heading">商品の詳細</div>
-                    <div class="sell_category_title">カテゴリー</div>
-                        <div class="sell_category_wrap">
-                            @foreach ($categories as $category) 
-                                <div class="sell_category">
-                                    <input type="checkbox" class="sell_category_input" id="sell_category_{{$category['id']}}"  name="sell_category[]" value="{{$category['id']}}">
-                                    <label for="sell_category_{{$category['id']}}">{{$category["category"]}}</label> 
-                                </div>
-                            @endforeach
-                        </div>
-                    @error("sell_category")
-                        <div class="error_message">
-                            {{$message}} 
-                        </div>
-                    @enderror
+                <div class="sell_category_title">カテゴリー</div>
+                    <div class="sell_category_wrap">
+                        @foreach ($categories as $category) 
+                            <div class="sell_category">
+                                <input type="checkbox" class="sell_category_input" id="sell_category_{{$category['id']}}"  name="sell_category[]" value="{{$category['id']}}">
+                                <label for="sell_category_{{$category['id']}}">{{$category["category"]}}</label> 
+                            </div>
+                        @endforeach
+                    </div>
+                @error("sell_category")
+                    <div class="error_message">{{$message}}</div>
+                @enderror
 
-                    <div class="sell_condition_title">商品の状態</div>
-                    <select class="sell_condition" name="sell_condition">
-                        <option class="sell_condition_option" value="" hidden>選択してください</option>
-                        <option class="sell_condition_option" value="良好">良好</option>
-                        <option class="sell_condition_option" value="目立った傷や汚れなし">目立った傷や汚れなし</option>
-                        <option class="sell_condition_option" value="やや傷や汚れあり">やや傷や汚れあり</option>
-                        <option class="sell_condition_option" value="状態が悪い">状態が悪い</option>
-                    </select>
-                    @error("sell_condition")
-                        <div class="error_message">
-                            {{$message}} 
-                        </div>
-                    @enderror
+                <div class="sell_condition_title">商品の状態</div>
+                <select class="sell_condition" name="sell_condition">
+                    <option class="sell_condition_option" value="" hidden>選択してください</option>
+                    <option class="sell_condition_option" value="良好">良好</option>
+                    <option class="sell_condition_option" value="目立った傷や汚れなし">目立った傷や汚れなし</option>
+                    <option class="sell_condition_option" value="やや傷や汚れあり">やや傷や汚れあり</option>
+                    <option class="sell_condition_option" value="状態が悪い">状態が悪い</option>
+                </select>
+                @error("sell_condition")
+                    <div class="error_message">{{$message}}</div>
+                @enderror
             </div>
 
 
@@ -67,25 +61,19 @@
                     <div class="sell_name_title">商品名</div>
                     <input type="text" class="sell_name" name="sell_name" value="{{old('sell_name')}}"/>
                     @error("sell_name")
-                        <div class="error_message">
-                            {{$message}} 
-                        </div>
+                        <div class="error_message">{{$message}}</div>
                     @enderror
 
                     <div class="sell_content_title">商品の説明</div>
                     <textarea name="sell_content" value="{{old('sell_content')}}"></textarea>
                     @error("sell_content")
-                        <div class="error_message">
-                            {{$message}} 
-                        </div>
+                        <div class="error_message">{{$message}}</div>
                     @enderror
 
                     <div class="sell_price_title">販売価格</div>
                     <input type="text" class="sell_price" name="sell_price" value="{{old('sell_price')}}"/>
                     @error("sell_price")
-                        <div class="error_message">
-                            {{$message}} 
-                        </div>
+                        <div class="error_message">{{$message}}</div>
                     @enderror
             </div>
 

@@ -32,9 +32,7 @@
                         <td class="table_text">xx</td>
                     </tr>
                 </table>
-                <div class="item_link_area" id="item_link">
-                    <a href="/purchase/{{$product['id']}}" class="item_link" id="item_link">購入手続きへ</a>
-                </div>
+                <button onclick="location.href='/purchase/{{$product['id']}}'" class="item_link">購入手続きへ</button>
             </div>
 
             <div class="item_description">

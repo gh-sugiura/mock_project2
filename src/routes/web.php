@@ -21,8 +21,8 @@ Route::middleware("auth")->group(function () {
     Route::get("/index", [ProductController::class, "getIndex"]);
     Route::get("/mypage", [ProductController::class, "getMypage"]);
     Route::post("/mypage", [ProductController::class, "postMypage"]);
-    Route::get("/item/{product_id}", [ProductController::class, "getItem"]);    //passparameter
-    Route::get("/purchase/{product_id}", [ProductController::class, "getPurchase"]);    //passparameter
+    Route::get("/item/{product_id}", [ProductController::class, "getItem"]);    //use passparameter
+    Route::get("/purchase/{product_id}", [ProductController::class, "getPurchase"]);    //use passparameter
     Route::get("/sell", [ProductController::class, "getSell"]);
 });
 
@@ -32,8 +32,8 @@ Route::middleware("auth")->group(function () {
 // "auth" => \App\Http\Middleware\Authenticate::class,
 Route::middleware("auth")->group(function () {
     Route::get('/mypage/profile', [ProfileController::class, 'getProfile']);
-    Route::post('/mypage', [ProfileController::class, 'postCreateEditProfile']);
-    Route::get('/purchase/address/{product_id}', [ProfileController::class, 'getAddress']);    //passparameter
+    Route::post('/index', [ProfileController::class, 'postCreateEditProfile']);
+    Route::get('/purchase/address/{product_id}', [ProfileController::class, 'getAddress']);    //use passparameter
     Route::post('/purchase/{product_id}', [ProfileController::class, 'postEditAddress']);
 });
 

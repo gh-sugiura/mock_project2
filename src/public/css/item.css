@@ -36,19 +36,18 @@
     font-size: 30px;
 }
 
-.item_link_area {
-    width: calc(100%*0.9);
+.item_link {
+    text-decoration: none;
     text-align: center;
+    width: calc(100%*0.9);
+    color: white;
     background-color: #ff5555;
     font-size: 25px;
+    border: none;
     border-radius: 5px;
     padding: 5px;
     margin-top: 15px;
-}
-
-.item_link {
-    text-decoration: none;
-    color: white;
+    cursor: pointer;
 }
 
 .description_title,

@@ -13,7 +13,7 @@
         </div>
         
 
-        <form class="form_profile" action="/mypage" enctype="multipart/form-data" method="post">
+        <form class="form_profile" action="/index" enctype="multipart/form-data" method="post">
             @csrf
             <div class="profile_img">
                 @if (isset($profile['img_path']))
@@ -29,9 +29,7 @@
                     </label> 
                 </div>
                 @error("img_path")
-                    <div class="error_message">
-                        {{ $message }} 
-                    </div>
+                    <div class="error_message">{{$message}}</div>
                 @enderror   
             </div>
 
@@ -45,9 +43,7 @@
                 @endif
             </div>
             @error("name")
-                <div class="error_message">
-                    {{ $message }} 
-                </div>
+                <div class="error_message">{{$message}}</div>
             @enderror
 
 
@@ -60,9 +56,7 @@
                 @endif  
             </div>
             @error("postalcode")
-                <div class="error_message">
-                    {{ $message }} 
-                </div>
+                <div class="error_message">{{$message}}</div>
             @enderror
 
 
@@ -75,9 +69,7 @@
                 @endif 
             </div>
             @error("address")
-                <div class="error_message">
-                    {{ $message }} 
-                </div>
+                <div class="error_message">{{$message}}</div>
             @enderror
 
 
@@ -90,9 +82,7 @@
                 @endif 
             </div>
             @error("building")
-                <div class="error_message">
-                    {{ $message }} 
-                </div>
+                <div class="error_message">{{$message}}</div>
             @enderror
 
 

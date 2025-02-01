@@ -21,7 +21,7 @@ class ProfileController extends Controller
 
 
 
-    // page transition : profile -> mypage
+    // page transition : profile -> index
     public function postCreateEditProfile(ProfileRequest $request)
     {
         //get & save image path
