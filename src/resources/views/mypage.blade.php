@@ -12,7 +12,7 @@
             @if (isset($profile['img_path']))
                 <img class="img_area" src="{{asset('storage/'.$profile["img_path"])}}" alt="No Image" width="200" height="200">  
             @else
-                <img class="img_area" src="{{asset('profile_image_backgrand.png')}}" alt="No Image" width="200" height="200">                
+                <img class="img_area" src="{{asset('profile_image_background.jpg')}}" alt="No Image" width="200" height="200">                
             @endif
         </div>
         <div class="profile_name">{{$profile["name"]}}</div>

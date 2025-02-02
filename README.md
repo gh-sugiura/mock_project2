@@ -32,18 +32,23 @@
 ## アプリケーション機能
 * 会員登録
 * 会員登録時のメール認証
+* ユーザーのプロフィール設定
 * 会員のログインとログアウト
-* 
-* 打刻による会員ごとの勤務時間管理（休憩時間も考慮可能）
+* 出品商品の一覧と商品詳細情報の閲覧
+* 商品の出品と購入
 
 
 ## 使用技術
-* laravel 8.83.8
-* PHP 7.4.9
-* MySQL 8.0.26
-* nginx 1.21.1
-* phpMyadmin
-* diagrams.net
+| 言語/フレームワーク  | バージョン  | 
+| ------------------- | ---------- | 
+| PHP                 | 7.9.4      | 
+| Laravel             | 8.83.8     | 
+| JavaScript          |            | 
+| jQuery              | 3.7.1      | 
+| MySQL               | 8.0.26     | 
+| phpMyadmin          |            | 
+| nginx               | 1.21.1     | 
+| diagrams.net        |            | 
 
 
 ## ER図
@@ -77,8 +82,8 @@
 | 3          | tanaka     | tanaka@example.com    | tanatana           | 3              | 玉ねぎ3束        | 
 | 4          | suzuki     | suzuki@example.com    | suzusuzu           | 4              | 革靴             | 
 | 5          | ito        | ito@example.com       | itooitoo           | 5              | ノートPC         | 
-| 6          | takahashi  | takahashi@example.com | takataka           |                | 　　　           | 
-| 7          | watanabe   | watanabe@example.com  | watawata           |                | 　　　　　　　　　 | 
-| 8          | yamamoto   | yamamoto@example.com  | yamayama           |                | 　　　　　      | 
-| 9          | nakamura   | nakamura@example.com  | nakanaka           |                | 　　　　　　     | 
-| 10         | kobayashi  | kobayashi@example.com | kobakoba           |                | 　　　　　　     | 
+| 6          | takahashi  | takahashi@example.com | takataka           | 6              | マイク           | 
+| 7          | watanabe   | watanabe@example.com  | watawata           | 7              | ショルダーバッグ  | 
+| 8          | yamamoto   | yamamoto@example.com  | yamayama           | 8              | タンブラー　      | 
+| 9          | nakamura   | nakamura@example.com  | nakanaka           | 9              | コーヒーミル     | 
+| 10         | kobayashi  | kobayashi@example.com | kobakoba           | 10             | メイクセット     | 
