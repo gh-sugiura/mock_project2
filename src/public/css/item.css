@@ -61,12 +61,13 @@
 .infomation_category,
 .infomation_condition {
     display: flex;
+    flex-wrap: wrap;
     width: calc(100%*0.9);
 }
 
 .category_title,
 .condition_title {
-    margin-right: 50px;
+    width: 130px;
     font-weight: bold;
 }
 
@@ -80,7 +81,7 @@
 
 .category {
     padding: 0px 10px;
-    margin-right: 20px;
+    margin: 2px 10px 2px 0px;
     background-color: lightgray;
     border-radius: 13px;
 }

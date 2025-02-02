@@ -19,18 +19,18 @@
                 @if (isset($profile['img_path']))
                     <img class="img_area" src="{{asset('storage/'.$profile["img_path"])}}" alt="No Image" width="200" height="200">  
                 @else
-                    <img class="img_area" src="{{asset('profile_image_backgrand.png')}}" alt="No Image" width="200" height="200">                
+                    <img class="img_area" src="{{asset('profile_image_background.jpg')}}" alt="No Image" width="200" height="200">                
                 @endif
                 {{-- input type="file"でデフォルト表示される「選択されていません」を非表示にするため、inputを非表示にしてlabelを設定 --}}
                 <div>
                     <label for="id_img">
                         <p class="lavel_img">画像を選択する</p>
                         <input class="input_img" id="id_img" type="file" name="img_path" accept=".png, .jpg, .jpeg">
-                    </label> 
+                    </label>
+                    @error("img_path")
+                        <div class="error_message">{{$message}}</div>
+                    @enderror
                 </div>
-                @error("img_path")
-                    <div class="error_message">{{$message}}</div>
-                @enderror   
             </div>
 
 
